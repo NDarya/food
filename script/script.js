@@ -2,13 +2,13 @@ let slides = document.querySelectorAll('.offer__slide')
 let prev = document.querySelector('.offer__slider-prev')
 let next = document.querySelector('.offer__slider-next')
 let btns = document.querySelectorAll('[data-modal]')
-let close = document.querySelectorAll('[data-close]')
+let closeBtn = document.querySelectorAll('[data-close]')
 let modal = document.querySelector('.modal')
 let tab = document.querySelectorAll('.tabcontent')
 let tabheader = document.querySelectorAll('.tabheader__item')
 let slideIndex = 1
 let tabNum = 1
-
+let tabhead = 1
 
 function showSlides(n) {
     if (n > slides.length) {
@@ -40,7 +40,7 @@ btns.forEach(btn => {
     }
 })
 
-close.forEach(close => {
+closeBtn.forEach(close => {
     close.onclick = () => {
         modal.classList.toggle('hide')
     }
@@ -48,15 +48,15 @@ close.forEach(close => {
 
 function showTabs(tabNum) {
 
-    tabheader.onclick = () => {
-        if (i < tabheader.length) {            
-            tabheader.classList.remove('tabheader__item_active')
+    tabheader.forEach(tabhead =>{
+        tabhead.onclick = () => {
+            tabhead.classList.remove('tabheader__item_active')
+            
         }
-        if (i > tabheader.length) {
-            tabheader.classList.add('tabheader__item_active')
+        tabhead.onclick = () => {
+            tabhead.classList.add('tabheader__item_active')  
         }
-        
-    }
+    })
     console.log(tabheader);
     console.log(tab);
     tab.forEach(tab => tab.classList.add('hide'))
