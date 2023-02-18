@@ -185,7 +185,7 @@ body.onscroll = () =>{
     setTimeout(() => {
         modal.classList.add('show')
         modal.classList.add('fade')
-     }, 3000);
+     }, 5000);
 }   
 
 
