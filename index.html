@@ -13,8 +13,8 @@
                 <img src="icons/logo.svg" alt="Логотип">
             </div>
             <nav class="header__links">
-                <a href="#" class="header__link">Доставка питания</a>
-                <a href="#" class="header__link">Второй пункт</a>
+                <a href="#order_form" class="header__link">Доставка питания</a>
+                <a href="#second_section" class="header__link">Второй пункт</a>
             </nav>
         </div>
         <div class="header__right-block">
@@ -91,6 +91,7 @@
         </div>
         <div class="container">
             <div class="offer__advantages">
+                <a name="second_section"></a>
                 <h2>Быстро и полезно</h2>
                 <div class="offer__advantages-text">
                     Готовка дома занимает много сил, времени и нервов. Мы привозим еду сразу на целый день, и ты можешь действовать так, как тебе удобно, не подстраиваясь ни под кого и будучи уверенным в качестве продукта!
@@ -141,15 +142,15 @@
                     Ваш пол
                 </div>
                 <div class="calculating__choose" id="gender">
-                    <div class="calculating__choose-item calculating__choose-item_active">Женщина</div>
-                    <div class="calculating__choose-item">Мужчина</div>
+                    <div data-g="woman" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                    <div data-g="man" class="calculating__choose-item">Мужчина</div>
                 </div>
 
                 <div class="calculating__subtitle">
                     Ваша конституция
                 </div>
                 <div class="calculating__choose calculating__choose_medium">
-                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item">
+                    <input type="text" id="height" placeholder="Введите рост" class="calculating__choose-item" >
                     <input type="text" id="weight" placeholder="Введите вес"  class="calculating__choose-item">
                     <input type="text" id="age" placeholder="Введите возраст" class="calculating__choose-item">
                 </div>
@@ -158,10 +159,10 @@
                     Выберите вашу физическая активность
                 </div>
                 <div class="calculating__choose calculating__choose_big">
-                    <div id="low" class="calculating__choose-item">Низкая активность </div>
-                    <div id="small"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
-                    <div id="medium" class="calculating__choose-item">Умеренная активность</div>
-                    <div id="high" class="calculating__choose-item">Высокая активность</div>
+                    <div data-act="1.2" class="calculating__choose-item">Низкая активность </div>
+                    <div data-act="1.3"  class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+                    <div data-act="1.4" class="calculating__choose-item">Умеренная активность</div>
+                    <div data-act="1.9" class="calculating__choose-item">Высокая активность</div>
                 </div>
 
                 <div class="calculating__divider"></div>
@@ -171,7 +172,7 @@
                         Ваша суточная норма калорий:
                     </div>
                     <div class="calculating__result">
-                        <span>2700</span> ккал
+                        <span id="result" >2700</span> ккал
                     </div>
                 </div>
             </div>
@@ -220,6 +221,7 @@
     </div>
 
     <div class="order">
+        <a name="order_form"></a>
         <div class="container">
             <div class="title">Заказывай пробный день прямо сейчас!</div>
             <form action="#" class="order__form">
